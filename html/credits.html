@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <link rel='icon' href="images/favicon/favicon.ico" />
-    <title>Movies</title>
+    <link href="../styles.css" rel="stylesheet">
+    <link rel='icon' href="../images/favicon/favicon.ico" />
+    <title>Credits</title>
     <!--New Snow theme stuff-->
-    <script src="awsome-webdev/scripts/snowstorm.js"></script>
+    <script src="../awsome-webdev/scripts/snowstorm.js"></script>
     <script>
       //Snow storm settings
       snowStorm.snowColor = '#ffffff';  
@@ -17,16 +17,17 @@
       snowStorm.snowStick = true;
       snowStorm.vMaxX = 2;
       snowStorm.vMaxY = 10;
+      snowStorm.snowCharacter = '*';
       </script>
       <!--End Snow storm/new theme-->
 </head>
 <body>
     <div class='box'>
-        <h1 class='title'>Movies (totally not pirated!!)</h1>
-    </div>
+        <h1 class='title'>Credits</h1>
+        </div>
     <div class="nav-container">
         <nav>
-            <a href='index.html'><button id="navBar">Home</button></a>
+            <a href='../index.html'><button id="navBar">Home</button></a>
             <a href='games.html'><button id="navBar">Games</button></a>
             <a href='movies.html'><button id="navBar">Movies</button></a>
             <a href='proxies.html'><button id="navBar">Proxies</button></a>
@@ -37,20 +38,22 @@
         </nav>
     </div>
     <div class='box'>
-        <p>Just search up a movie below! (Or just find it)</p> 
-        <small>Note: some movies may take some time to load.</small>
-        <input type="search" id="query" name="q" placeholder="Search for movie!" class="search">
-        <center><p style="margin: 10px;">OR</p></center>
-        <button class="search" style="color: rgb(0, 0, 0);" onclick="Launchmovies()">Launch 92Flix</button>
-        <ul id="search-results"></ul>
-    </div>
-   
-    <div id="movie-container" class="items">
+        <h1>These people helped a lot when making this website</h1>
+        <ul>
+            <li><a href="https://github.com/ekoerp1">ekoerp1</a>Helps find bugs and supplies game files. Really the only person I talk to that I don't know IRL!!</li>
+            <li><a href="https://github.com/awsome-webdev">awsome-webdev</a>Added a crap ton of proxies, and he will probably do more.</li>
+            <li>Evelyn(owner of EvieEggs google site)</li>
+            <li>Oliver (owner of NomNom)</li>
+            <li>People that helped me learn how to code</li>
+            <li>uh.. Oh! the people that supplied me with hacks and proxies</li>
+            <li>Maceo - QA tester</li>
+        </ul>
     </div>
     <!--stat counter stuff
     11/21/24
+    j
     --> 
-   <!-- Default Statcounter code for nub
+    <!-- Default Statcounter code for nub
 https://bcrhbrhcdb.github.io/Nooby/ -->
 <script type="text/javascript">
     var sc_project=13058758; 
@@ -67,11 +70,9 @@ https://bcrhbrhcdb.github.io/Nooby/ -->
     alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     <!-- End of Statcounter Code -->
-    <script src="javascript/404.js"></script>
-    <script src='javascript/announcement.js'></script>
-    <script src="javascript/movieData.js"></script>
-    <script src="javascript/movieLoader.js"></script>
-    <script src="javascript/script.js"></script>
-    <script src="awsome-webdev/scripts/movie.js"></script>
+    <script src="../javascript/404.js"></script>
+<script src='../javascript/script.js'>
+</script>
+<script src='../javascript/announcement.js'></script>
 </body>
 </html>
