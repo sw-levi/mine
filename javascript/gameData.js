@@ -1012,6 +1012,16 @@ const games = {
         likes: 0,
         dislikes: 0,
     },
-    
+    adanceoffireandice:{
+        title: "A Dance of Fire and Ice",
+        url: "game-template.html?id=adanceoffireandice",
+        image: "../Games/html5-games/a-dance-of-fire-and-ice/splash.png",
+        originalUrl: "../Games/html5-games/a-dance-of-fire-and-ice/index.html",
+        description: "make sute to fallow the beat",
+        type: "folder",
+        ratings: [],
+        likes: 0,
+        dislikes: 0,
+    },
 
 }
