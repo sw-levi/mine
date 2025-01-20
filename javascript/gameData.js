@@ -989,6 +989,29 @@ const games = {
         ratings: [],
         likes: 0,
         dislikes: 0,
-    }
+    },
+    tenminutestilldawn:{
+        title: "10 Minutes Till Dawn",
+        url: "game-template.html?id=tenminutestilldawn",
+        image: "../Games/html5-games/10-minutes-till-dawn/splash.png",
+        originalUrl: "../Games/html5-games/10-minutes-till-dawn/index.html",
+        description: "Survive the night",
+        type: "folder",
+        ratings: [],
+        likes: 0,
+        dislikes: 0,
+    },
+    backrooms:{
+        title: "Backrooms",
+        url: "game-template.html?id=backrooms",
+        image: "../Games/html5-games/backrooms/backrooms.jpg",
+        originalUrl: "../Games/html5-games/backrooms/index.html",
+        description: "can you get out",
+        type: "folder",
+        ratings: [],
+        likes: 0,
+        dislikes: 0,
+    },
+    
 
 }
