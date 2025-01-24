@@ -2842,8 +2842,12 @@
                           i = "string" == typeof e.data ? JSON.parse(e.data) : e.data
                       } catch (e) {}
                       var n = i.__tcfapiReturn;
-                      n && "function" == typeof t[n.callId] && (t[n.callId](n.returnValue, n.success),
-                      t[n.callId] = null)
+                      if (n && Object.prototype.hasOwnProperty.call(t, n.callId) && typeof t[n.callId] === 'function') {
+                          t[n.callId](n.returnValue, n.success);
+                          t[n.callId] = null;
+                      } else {
+                          console.error("Invalid callId or not a function:", n.callId);
+                      }
                   }
                   ), !1)
               }
