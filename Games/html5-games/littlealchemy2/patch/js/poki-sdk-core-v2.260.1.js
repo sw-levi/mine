@@ -2822,6 +2822,7 @@
               if (!window.__tcfapi) {
                   var e = window.top
                     , t = {};
+                  const validCallIds = new Set();
                   window.__tcfapi = function(i, n, r, o) {
                       var a = "" + Math.random()
                         , s = {
@@ -2833,6 +2834,7 @@
                           }
                       };
                       t[a] = r,
+                      validCallIds.add(a);
                       e.postMessage(s, "*")
                   }
                   ,
@@ -2842,9 +2844,10 @@
                           i = "string" == typeof e.data ? JSON.parse(e.data) : e.data
                       } catch (e) {}
                       var n = i.__tcfapiReturn;
-                      if (n && Object.prototype.hasOwnProperty.call(t, n.callId) && typeof t[n.callId] === 'function') {
+                      if (n && validCallIds.has(n.callId) && Object.prototype.hasOwnProperty.call(t, n.callId) && typeof t[n.callId] === 'function') {
                           t[n.callId](n.returnValue, n.success);
                           t[n.callId] = null;
+                          validCallIds.delete(n.callId);
                       } else {
                           console.error("Invalid callId or not a function:", n.callId);
                       }
