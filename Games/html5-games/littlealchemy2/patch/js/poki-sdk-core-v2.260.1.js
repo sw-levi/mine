@@ -2881,8 +2881,10 @@
                   ,
                   window.addEventListener("message", (function(e) {
                       var i = e && e.data && e.data.__uspapiReturn;
-                      i && i.callId && "function" == typeof t[i.callId] && (t[i.callId](i.returnValue, i.success),
-                      t[i.callId] = null)
+                      if (i && i.callId && Object.prototype.hasOwnProperty.call(t, i.callId) && "function" == typeof t[i.callId]) {
+                          t[i.callId](i.returnValue, i.success);
+                          t[i.callId] = null;
+                      }
                   }
                   ), !1)
               }
