@@ -13855,7 +13855,7 @@
         P.prototype.M.call(this)
     }
     ;
-    var Vw = RegExp("/pagead/conversion|/pagead/adview|/pagead/gen_204|/activeview?|csi.gstatic.com/csi|google.com/pagead/xsul|google.com/ads/measurement/l|googleads.g.doubleclick.net/pagead/ide_cookie|googleads.g.doubleclick.net/xbbe/pixel")
+    var Vw = RegExp("/pagead/conversion|/pagead/adview|/pagead/gen_204|/activeview?|csi.gstatic.com/csi|google.com/pagead/xsul|google.com/ads/measurement/l|googleads\\.g\\.doubleclick\\.net/pagead/ide_cookie|googleads\\.g\\.doubleclick\\.net/xbbe/pixel")
       , Ww = RegExp("outstream.min.js")
       , Xw = RegExp("outstream.min.css")
       , Yw = RegExp("fonts\\.gstatic\\.com")
