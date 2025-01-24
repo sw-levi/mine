@@ -13859,7 +13859,7 @@
       , Ww = RegExp("outstream.min.js")
       , Xw = RegExp("outstream.min.css")
       , Yw = RegExp("fonts\\.gstatic\\.com")
-      , Zw = RegExp("googlevideo.com/videoplayback|c.2mdn.net/videoplayback|gcdn.2mdn.net/videoplayback")
+      , Zw = RegExp("googlevideo.com/videoplayback|c\\.2mdn.net/videoplayback|gcdn\\.2mdn.net/videoplayback")
       , $w = RegExp("custom.elements.min.js");
     function ax(a, b) {
         var c = 0
