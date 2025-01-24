@@ -11645,7 +11645,7 @@
         return u.navigator ? u.navigator.userAgent : ""
     }, Lt = kb(Kt(), "(iPad") || kb(Kt(), "(Macintosh") || kb(Kt(), "(iPod") || kb(Kt(), "(iPhone");
     var Mt = "ad.doubleclick.net bid.g.doubleclick.net ggpht.com google.co.uk google.com googleads.g.doubleclick.net googleads4.g.doubleclick.net googleadservices.com googlesyndication.com googleusercontent.com gstatic.com gvt1.com prod.google.com pubads.g.doubleclick.net s0.2mdn.net static.doubleclick.net surveys.g.doubleclick.net youtube.com ytimg.com".split(" ")
-      , Nt = ["c.googlesyndication.com"];
+      , Nt = ["c\\.googlesyndication\\.com"];
     function Ot(a, b) {
         b = void 0 === b ? window.location.protocol : b;
         var c = !1;
