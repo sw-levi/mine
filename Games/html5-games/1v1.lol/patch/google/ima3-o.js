@@ -13858,7 +13858,7 @@
     var Vw = RegExp("/pagead/conversion|/pagead/adview|/pagead/gen_204|/activeview?|csi.gstatic.com/csi|google.com/pagead/xsul|google.com/ads/measurement/l|googleads.g.doubleclick.net/pagead/ide_cookie|googleads.g.doubleclick.net/xbbe/pixel")
       , Ww = RegExp("outstream.min.js")
       , Xw = RegExp("outstream.min.css")
-      , Yw = RegExp("fonts.gstatic.com")
+      , Yw = RegExp("fonts\\.gstatic\\.com")
       , Zw = RegExp("googlevideo.com/videoplayback|c.2mdn.net/videoplayback|gcdn.2mdn.net/videoplayback")
       , $w = RegExp("custom.elements.min.js");
     function ax(a, b) {
