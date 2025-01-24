@@ -189,7 +189,7 @@
                           return e.replace(/[\-\[\]{}()*+?.,\\\^$|#]/g, "\\$&")
                       }
                       function d(e) {
-                          return a(e).replace("<", "(?:<|&lt;)").replace(">", "(?:>|&gt;)").replace("&", "(?:&|&amp;)").replace('"', '(?:"|&quot;)').replace(/\s+/g, "\\s+")
+                          return a(e).replace(/</g, "(?:<|&lt;)").replace(/>/g, "(?:>|&gt;)").replace(/&/g, "(?:&|&amp;)").replace(/"/g, '(?:"|&quot;)').replace(/\s+/g, "\\s+")
                       }
                       function A(e, t) {
                           for (var i, r, o = 0, a = t.length; o < a; ++o)
