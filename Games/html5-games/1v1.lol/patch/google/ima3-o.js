@@ -1,7 +1,7 @@
 // Copyright 2011 Google Inc. All Rights Reserved.
 (function() {
     /*
-
+    
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
@@ -20,8 +20,7 @@
             return a;
         a[b] = c.value;
         return a
-    }
-    , da = function(a) {
+    }, da = function(a) {
         a = ["object" == typeof globalThis && globalThis, a, "object" == typeof window && window, "object" == typeof self && self, "object" == typeof global && global];
         for (var b = 0; b < a.length; ++b) {
             var c = a[b];
@@ -30,26 +29,31 @@
         }
         throw Error("Cannot find global object");
     }, ea = da(this), fa = function(a, b) {
-        if (b)
-            a: {
-                var c = ea;
-                a = a.split(".");
-                for (var d = 0; d < a.length - 1; d++) {
-                    var e = a[d];
-                    if (!(e in c))
-                        break a;
-                    c = c[e]
-                }
-                a = a[a.length - 1];
-                d = c[a];
-                b = b(d);
-                b != d && null != b && ca(c, a, {
-                    configurable: !0,
-                    writable: !0,
-                    value: b
-                })
-            }
+        if (b) {
+            updateGlobalObject(a.split("."), b);
+        }
     };
+
+    function updateGlobalObject(parts, updateFunction) {
+        var context = ea;
+        for (var i = 0; i < parts.length - 1; i++) {
+            var part = parts[i];
+            if (!(part in context))
+                return;
+            context = context[part];
+        }
+        var lastPart = parts[parts.length - 1];
+        var oldValue = context[lastPart];
+        var newValue = updateFunction(oldValue);
+        if (newValue != oldValue && newValue != null) {
+            ca(context, lastPart, {
+                configurable: !0,
+                writable: !0,
+                value: newValue
+            });
+        }
+    }
+
     fa("Symbol", function(a) {
         if (a)
             return a;
@@ -59,21 +63,21 @@
                 configurable: !0,
                 writable: !0,
                 value: g
-            })
+            });
         };
         b.prototype.toString = function() {
-            return this.g
-        }
-        ;
+            return this.g;
+        };
         var c = "jscomp_symbol_" + (1E9 * Math.random() >>> 0) + "_"
           , d = 0
           , e = function(f) {
             if (this instanceof e)
                 throw new TypeError("Symbol is not a constructor");
-            return new b(c + (f || "") + "_" + d++,f)
+            return new b(c + (f || "") + "_" + d++,f);
         };
-        return e
+        return e;
     });
+
     fa("Symbol.iterator", function(a) {
         if (a)
             return a;
@@ -84,26 +88,24 @@
                 configurable: !0,
                 writable: !0,
                 value: function() {
-                    return ha(aa(this))
+                    return ha(aa(this));
                 }
-            })
+            });
         }
-        return a
+        return a;
     });
+
     var ha = function(a) {
         a = {
             next: a
         };
         a[Symbol.iterator] = function() {
-            return this
-        }
-        ;
-        return a
-    }
-      , p = function(a) {
-        return a.raw = a
-    }
-      , q = function(a) {
+            return this;
+        };
+        return a;
+    }, p = function(a) {
+        return a.raw = a;
+    }, q = function(a) {
         var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator];
         if (b)
             return b.call(a);
@@ -112,31 +114,27 @@
                 next: aa(a)
             };
         throw Error(String(a) + " is not an iterable or ArrayLike");
-    }
-      , ia = function(a) {
+    }, ia = function(a) {
         if (!(a instanceof Array)) {
             a = q(a);
             for (var b, c = []; !(b = a.next()).done; )
                 c.push(b.value);
-            a = c
+            a = c;
         }
-        return a
-    }
-      , ka = function(a, b) {
-        return Object.prototype.hasOwnProperty.call(a, b)
-    }
-      , ma = "function" == typeof Object.assign ? Object.assign : function(a, b) {
+        return a;
+    }, ka = function(a, b) {
+        return Object.prototype.hasOwnProperty.call(a, b);
+    }, ma = "function" == typeof Object.assign ? Object.assign : function(a, b) {
         for (var c = 1; c < arguments.length; c++) {
             var d = arguments[c];
             if (d)
                 for (var e in d)
-                    ka(d, e) && (a[e] = d[e])
+                    ka(d, e) && (a[e] = d[e]);
         }
-        return a
-    }
-    ;
+        return a;
+    };
     fa("Object.assign", function(a) {
-        return a || ma
+        return a || ma;
     });
     var na = "function" == typeof Object.create ? Object.create : function(a) {
         var b = function() {};
