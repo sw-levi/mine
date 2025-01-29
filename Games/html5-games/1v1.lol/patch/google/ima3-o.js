@@ -384,34 +384,35 @@ SPDX-License-Identifier: Apache-2.0
         }
         : null
     });
-    fa("Promise", function(a) {
-        function b() {
-            this.g = null
-        }
-        function c(g) {
-            return g instanceof e ? g : new e(function(h) {
-                h(g)
-            }
-            )
-        }
-        if (a)
-            return a;
-        b.prototype.h = function(g) {
-            if (null == this.g) {
-                this.g = [];
-                const h = this;
-                this.j(function() {
-                    h.l()
-                })
-            }
-            this.g.push(g)
-        }
-        ;
-        const d = ea.setTimeout;
-        b.prototype.j = function(g) {
-            d(g, 0)
-        }
-        ;
+386| fa("Symbol.iterator", function(a) {
+387|     if (a)
+388|         return a;
+389|     a = Symbol("Symbol.iterator");
+390|     const b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" ");
+391|     for (let c = 0; c < b.length; c++) {
+392|         let d = ea[b[c]];
+393|         if ("function" === typeof d && "function" != typeof d.prototype[a]) {
+394|             ca(d.prototype, a, {
+395|                 configurable: !0,
+396|                 writable: !0,
+397|                 value: function() {
+398|                     return ha(aa(this));
+399|                 }
+400|             });
+401|         }
+402|     }
+403|     return a;
+404| });
+
+405| const ha = function(a) {
+406|     a = {
+407|         next: a
+408|     };
+409|     a[Symbol.iterator] = function() {
+410|         return this;
+411|     };
+412|     return a;
+413| };
         b.prototype.l = function() {
             while (this.g && this.g.length) {
                 const g = this.g;
