@@ -384,35 +384,35 @@ SPDX-License-Identifier: Apache-2.0
         }
         : null
     });
-386| fa("Symbol.iterator", function(a) {
-387|     if (a)
-388|         return a;
-389|     a = Symbol("Symbol.iterator");
-390|     const b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" ");
-391|     for (let c = 0; c < b.length; c++) {
-392|         let d = ea[b[c]];
-393|         if ("function" === typeof d && "function" != typeof d.prototype[a]) {
-394|             ca(d.prototype, a, {
-395|                 configurable: !0,
-396|                 writable: !0,
-397|                 value: function() {
-398|                     return ha(aa(this));
-399|                 }
-400|             });
-401|         }
-402|     }
-403|     return a;
-404| });
+fa("Symbol.iterator", function(a) {
+     if (a)
+         return a;
+     a = Symbol("Symbol.iterator");
+     const b = "Array Int8Array Uint8Array Uint8ClampedArray Int16Array Uint16Array Int32Array Uint32Array Float32Array Float64Array".split(" ");
+     for (let c = 0; c < b.length; c++) {
+         let d = ea[b[c]];
+         if ("function" === typeof d && "function" != typeof d.prototype[a]) {
+             ca(d.prototype, a, {
+                 configurable: !0,
+                 writable: !0,
+                 value: function() {
+                     return ha(aa(this));
+                 }
+             });
+         }
+     }
+     return a;
+ });
 
-405| const ha = function(a) {
-406|     a = {
-407|         next: a
-408|     };
-409|     a[Symbol.iterator] = function() {
-410|         return this;
-411|     };
-412|     return a;
-413| };
+ const ha = function(a) {
+     a = {
+         next: a
+     };
+     a[Symbol.iterator] = function() {
+         return this;
+     };
+    return a;
+ };
         b.prototype.l = function() {
             while (this.g && this.g.length) {
                 const g = this.g;
