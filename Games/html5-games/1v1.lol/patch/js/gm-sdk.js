@@ -671,7 +671,7 @@ var _0x7d4a = [
     "none",
     "gmadstester",
     "(vkplay.ru|vkplay.com|dzen.ru)",
-    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21739493398/GameMonetize.com-ADX-AFG-Preroll-Ads&description_url=",
+    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21739493398/GameMonetize\.com-ADX-AFG-Preroll-Ads&description_url=",
     "(y8.com|y8|dollmania.com|pog.com|gamepost.com)",
     "<div id=\"gmLoadingText\" style=\"position:absolute;bottom:0;left:0;right:0;z-index:999999;\"><div style=\"border-top: 1px solid #000;min-height: 35px;background-color: #000000;position: relative;width: 100%;\"><a style=\"margin-top: 3px;position: absolute;right: 5px;text-decoration: none;\" target=\"_blank\" href=\"https://gamemonetize.com/\"><span style=\"font-size: 13px;font-family:Helvetica,Arial,sans-serif;font-weight: 100;color: #fff;padding-right: 8px;text-decoration: none;position: relative;top: 2px;\" id=\"loading-text-gm\">Powered by</span><img style=\"vertical-align: top;position: relative;width: 131px;\" id=\"gmLogo\" alt=\"GameMonetize.com\" src=\"patch/images/gamemonetize-logo.png?https://gamemonetize.com/gamemonetize-logo.png\" border=\"0\"></a><h1 style=\"display:none;text-indent: -9999px;\">GameMonetize.com</h1></div></div>",
     "#sdk__advertisement",
