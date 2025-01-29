@@ -5999,8 +5999,13 @@ var adxAds2 = false;
             return this[_0x7d4a[1012]](_0xc8c5xa || _0x7d4a[1011], [])
         },
         promise: function(_0xc8c5xa, _0xc8c5x16) {
-            var _0xc8c5xc, _0xc8c5xb = 1, e = _0xc8c5x8.Deferred(), _0xc8c5x12 = this, _0xc8c5x10 = this[_0x7d4a[21]], _0xc8c5xf = function() {
-                --_0xc8c5xb || e[_0x7d4a[976]](_0xc8c5x12, [_0xc8c5x12])
+            let _0xc8c5xc;
+            let _0xc8c5xb = 1;
+            const e = _0xc8c5x8.Deferred();
+            const _0xc8c5x12 = this;
+            const _0xc8c5x10 = this[_0x7d4a[21]];
+            const _0xc8c5xf = function() {
+            --_0xc8c5xb || e[_0x7d4a[976]](_0xc8c5x12, [_0xc8c5x12])
             };
             _0x7d4a[102] != typeof _0xc8c5xa && (_0xc8c5x16 = _0xc8c5xa,
             _0xc8c5xa = void (0)),
