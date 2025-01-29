@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found!</title>
-    <link rel="stylesheet" id="dynamic-stylesheet"> <!-- Dynamic path for styles.css -->
-    <link rel="shortcut icon" id="dynamic-favicon" type="image/x-icon"> <!-- Dynamic path for favicon -->
+    <link rel="stylesheet" id="dynamic-stylesheet">
+    <link rel="shortcut icon" id="dynamic-favicon" type="image/x-icon">
     <style>
         .errorPage {
             width: auto;
             height: 1000px;
             padding: 50px;
             margin: 10px;
-            text-align: center; /* Center content */
+            text-align: center;
         }
+
         .image-container {
             display: flex;
             justify-content: center;
         }
     </style>
 </head>
+
 <body>
     <div class="box errorPage">
         <h1 class='title'>404 - Page Not Found</h1>
@@ -31,7 +34,7 @@
         </div>
         <p>Oops! The page you are looking for doesn't exist. Looks like you're a noob at finding the right page!</p>
         <div class="image-container">
-            <img id="dynamic-image" src="" alt="404 Error Illustration" style="border-radius: 5px;"> <!-- Dynamic path for image -->
+            <img id="dynamic-image" src="" alt="404 Error Illustration" style="border-radius: 5px;">
         </div>
         <a href="/Nooby/index.html"><button class="allButton" style="padding: 10px;">Return to Home Page</button></a>
         <h3>Or, go to another page:</h3>
@@ -56,4 +59,5 @@
         document.getElementById('dynamic-image').src = `${baseUrl}/images/404.jpeg`;
     </script>
 </body>
+
 </html>
