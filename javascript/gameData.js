@@ -1034,5 +1034,16 @@ const games = {
         likes: 0,
         dislikes: 0,
     },
+    bobtherobber2:{
+        title: "Bob the Robber 2",
+        url: "game-template.html?id=bobtherobber2",
+        image: "../Games/html5-games/bobtherobber2/splash.jpeg",
+        originalUrl: "../Games/html5-games/bobtherobber2/index.html",
+        description: "your favorite robber at large",
+        type: "folder",
+        ratings: [],
+        likes: 0,
+        dislikes: 0,
+    }
 
 }
